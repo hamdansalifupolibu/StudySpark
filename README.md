@@ -48,6 +48,7 @@ The heart of StudySpark is the `:shared` Kotlin Multiplatform module, which cont
 *   **Networking**: Uses **Ktor Client** with ContentNegotiation for JSON processing.
 *   **Response Parsing**: Extracts structured data (explanations, quizzes, flashcards) from unstructured LLM responses.
 *   **Safety & Validation**: Validates inputs and gracefully handles API errors and rate limits.
+*   **Secure Architecture**: Implements `StudyEngineFactory` with `expect/actual` mechanism to resolve keys safely from the environment or fallback to **Mock Mode**.
 
 ### 2. Android App (`:androidApp`)
 *   **UI Framework**: 100% **Jetpack Compose** (Material 3).
