@@ -28,14 +28,14 @@ This ensures consistent behavior, reduced bugs, and maximum code reuse across pl
 ## 📱 Android App Screenshots
 
 <p align="center">
-  <img src="androidApp/screenshots/01_App_landing.png" width="220" />
-  <img src="androidApp/screenshots/02_input_AI_in_action_mobile_app.png" width="220" />
-  <img src="androidApp/screenshots/03_Summary_Quiz_Flashcards_mobile_APP.png" width="220" />
+  <img src="screenshots/01_App_landing.png" width="220" />
+  <img src="screenshots/02_input_AI_in_action_mobile_app.png" width="220" />
+  <img src="screenshots/03_Summary_Quiz_Flashcards_mobile_APP.png" width="220" />
 </p>
 
 <p align="center">
-  <img src="androidApp/screenshots/04__Rephrase_in_action_APP.png" width="220" />
-  <img src="androidApp/screenshots/05_about_page_APP.png" width="220" />
+  <img src="screenshots/04__Rephrase_in_action_APP.png" width="220" />
+  <img src="screenshots/05_about_page_APP.png" width="220" />
 </p>
 
 ## �🏗 Architecture & Technical Details
