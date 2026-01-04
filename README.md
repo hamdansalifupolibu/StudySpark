@@ -38,24 +38,7 @@ This ensures consistent behavior, reduced bugs, and maximum code reuse across pl
 | **Android** | ✅ Live | Jetpack Compose + Material 3 |
 | **iOS** | 🔜 Ready | (Shared module is compatible) |
 
-## � Demo Video
-
-[![StudySpark Demo Video](https://img.youtube.com/vi/CI6pAQ2FviA/0.jpg)](https://youtu.be/CI6pAQ2FviA)
-
-## 📱 Android App Screenshots
-
-<p align="center">
-  <img src="screenshots/01_App_landing.png" width="220" />
-  <img src="screenshots/02_input_AI_in_action_mobile_app.png" width="220" />
-  <img src="screenshots/03_Summary_Quiz_Flashcards_mobile_APP.png" width="220" />
-</p>
-
-<p align="center">
-  <img src="screenshots/04__Rephrase_in_action_APP.png" width="220" />
-  <img src="screenshots/05_about_page_APP.png" width="220" />
-</p>
-
-## �🏗 Architecture & Technical Details
+## 🏗 Architecture & Technical Details
 
 The heart of StudySpark is the `:shared` Kotlin Multiplatform module, which contains all core business logic and AI orchestration.
 
