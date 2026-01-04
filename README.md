@@ -4,6 +4,23 @@
 
 > One shared intelligence. Multiple platforms. Zero duplicated logic.
 
+## 🎥 Demo Video
+
+[![StudySpark Demo Video](https://img.youtube.com/vi/CI6pAQ2FviA/0.jpg)](https://youtu.be/CI6pAQ2FviA)
+
+## 📱 Android App Screenshots
+
+<p align="center">
+  <img src="screenshots/01_App_landing.png" width="220" />
+  <img src="screenshots/02_input_AI_in_action_mobile_app.png" width="220" />
+  <img src="screenshots/03_Summary_Quiz_Flashcards_mobile_APP.png" width="220" />
+</p>
+
+<p align="center">
+  <img src="screenshots/04__Rephrase_in_action_APP.png" width="220" />
+  <img src="screenshots/05_about_page_APP.png" width="220" />
+</p>
+
 ## 📘 Project Overview
 
 StudySpark is an AI-powered study companion designed to help students understand complex topics faster and study more effectively. It acts as a second brain that can explain concepts, summarize notes, generate quizzes, and create interactive flashcards on demand.
