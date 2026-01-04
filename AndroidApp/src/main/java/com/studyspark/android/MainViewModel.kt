@@ -35,8 +35,10 @@ class MainViewModel : ViewModel() {
 
     // Engine
     // NOTE: In a real app, inject this. For this contest demo, we instantiate directly.
-    private val apiKey = "AIzaSyARsMd7qVbekiVn0uXh3ASwM7y4QZ92tQY" // Demo key from WebApp fallback
-    private val engine: StudyEngine = if (apiKey.isNotBlank()) GeminiStudyEngine(apiKey) else MockStudyEngine()
+    // Engine
+    // NOTE: In a real app, inject this. For this contest demo, we instantiate via Factory.
+    // The Factory resolves the key from environment variables (if available) or falls back to Mock Mode.
+    private val engine: StudyEngine = com.studyspark.shared.engine.StudyEngineFactory.create()
 
     fun generateStudyAid(variation: Variation = Variation.ORIGINAL) {
         if (input.isBlank()) return

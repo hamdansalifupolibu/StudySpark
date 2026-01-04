@@ -110,6 +110,20 @@ The heart of StudySpark is the `:shared` Kotlin Multiplatform module, which cont
     ```
     *Or simply open the project in Android Studio and press **Run**.*
 
+### 🔐 Security & AI Modes
+
+**Default: Mock Mode (Safe)**
+If no API key is provided, the app runs in **Mock Mode**, returning realistic sample data. This allows judges to test the UI and flow without needing an API key.
+
+**Optional: Real AI Mode**
+To enable the live Gemini 1.5 Flash integration:
+
+1.  **Web App**: Append `?key=YOUR_API_KEY` to the URL.
+2.  **Android App**: Set the `GEMINI_API_KEY` environment variable on your machine.
+    *   **Windows**: `setx GEMINI_API_KEY "your_key"`
+    *   **macOS/Linux**: `export GEMINI_API_KEY="your_key"`
+    *(Note: Restart Android Studio/Emulator after setting env vars)*
+
 ## ✅ Contest Compliance
 
 *   ✅ **Kotlin Multiplatform**: Core logic fully shared.

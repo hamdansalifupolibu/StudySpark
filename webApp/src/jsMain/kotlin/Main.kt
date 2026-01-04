@@ -23,22 +23,15 @@ fun main() {
          apiKey = kotlinx.browser.localStorage.getItem("gemini_key")
     }
     
-    // Fallback to the provided demo key if still null
-    if (apiKey.isNullOrBlank()) {
-        apiKey = "AIzaSyARsMd7qVbekiVn0uXh3ASwM7y4QZ92tQY"
-    }
     
     // Save it back to storage to keep things sync
     if (!apiKey.isNullOrBlank()) {
         kotlinx.browser.localStorage.setItem("gemini_key", apiKey)
     }
     
-    // Default to Real Engine now that we have a key
-    val engine: StudyEngine = if (!apiKey.isNullOrBlank()) {
-        GeminiStudyEngine(apiKey)
-    } else {
-        MockStudyEngine()
-    }
+    // Initialize Engine via Shared Factory
+    // This allows the Factory to decide whether to use Real AI (if key present) or Mock Mode.
+    val engine: StudyEngine = com.studyspark.shared.engine.StudyEngineFactory.create(webUrlKey = apiKey)
     
     val scope = MainScope()
 
@@ -47,8 +40,9 @@ fun main() {
         val root = document.getElementById("root") as? HTMLDivElement ?: return@addEventListener
         root.innerHTML = "" // Clear the "Welcome" message
         
-        // Show warning if Mock mode
-        if (apiKey.isNullOrBlank()) {
+        // Show warning if Mock mode (Check if engine is MockStudyEngine type if needed, or check apiKey blankness)
+        // Since we delegated creation, we can infer mode from the engine type or just check if apiKey was null.
+        if (engine is MockStudyEngine) {
              val warning = document.createElement("div").apply {
                 className = "warning-box"
                 innerHTML = "<i class='fas fa-exclamation-triangle'></i> <div><strong>Mock Mode Active.</strong>&nbsp;To use Real AI, add&nbsp;<code>?key=YOUR_KEY</code>&nbsp;to the URL.</div>"
