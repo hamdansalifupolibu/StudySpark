@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpark</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h2>Loading StudySpark...</h2>
+            <p>Preparing your study tools</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>StudySpark</h1>
+                </div>
+                <p class="tagline">AI-Powered Study Assistant</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- App Container -->
+            <div id="root" class="app-root">
+                <!-- Content will be injected here by Kotlin -->
+                <div class="welcome-message">
+                    <i class="fas fa-rocket"></i>
+                    <h2>Welcome to StudySpark!</h2>
+                    <p>Your AI study assistant is loading. Prepare to supercharge your learning experience.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>StudySpark &copy; 2026 | Transform Your Learning Experience</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="openAbout(); return false;"><i class="fas fa-info-circle"></i>
+                    About</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-star"></i>
+                    <h2>About StudySpark</h2>
+                </div>
+                <button class="modal-close" onclick="closeAbout()"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="about-hero">
+                    <div class="about-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Your Intelligent Study Assistant</h3>
+                    <p>Transforming learning through AI-powered tools and interactive study materials.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon tech">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Built with KMP</h4>
+                        <p>Powered by Kotlin Multiplatform - sharing 100% of AI logic, data models, and networking
+                            across platforms.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="card-icon ai">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>AI-Powered</h4>
+                        <p>Advanced AI algorithms that understand context and generate personalized study materials.</p>
+                    </div>
+                </div>
+
+                <div class="creator-section">
+                    <h4><i class="fas fa-user-circle"></i> Created By</h4>
+                    <div class="creator-card">
+                        <div class="creator-avatar">
+                            <span>HP</span>
+                            <div class="status-indicator"></div>
+                        </div>
+                        <div class="creator-info">
+                            <h5>Hamdan Salifu Polibu</h5>
+                            <p class="creator-title">Computer Science Student</p>
+                            <p class="creator-institution">
+                                <i class="fas fa-university"></i> University of Mines and Technology (UMaT), Ghana
+                            </p>
+                            <div class="creator-contact">
+                                <span><i class="fas fa-phone"></i> +233 599 545 544</span>
+                                <span><i class="fas fa-envelope"></i> ce-hspolibu8923@st.umat.edu.gh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="modal-action-btn" onclick="closeAbout()">
+                        <i class="fas fa-check"></i> Got it!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="kotlin-kotlin-stdlib.js"></script>
+    <script src="kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js"></script>
+    <script src="88b0986a7186d029-atomicfu-js-ir.js"></script>
+    <script src="kotlin-kotlinx-atomicfu-runtime-js-ir.js"></script>
+    <script src="kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js"></script>
+    <script src="kotlinx-serialization-kotlinx-serialization-core-js-ir.js"></script>
+    <script src="kotlinx-serialization-kotlinx-serialization-json-js-ir.js"></script>
+    <script src="ktor-ktor-io.js"></script>
+    <script src="ktor-ktor-utils.js"></script>
+    <script src="ktor-ktor-events.js"></script>
+    <script src="ktor-ktor-http.js"></script>
+    <script src="ktor-ktor-websockets.js"></script>
+    <script src="ktor-ktor-serialization.js"></script>
+    <script src="ktor-ktor-websocket-serialization.js"></script>
+    <script src="ktor-ktor-client-core.js"></script>
+    <script src="ktor-ktor-serialization-kotlinx.js"></script>
+    <script src="ktor-ktor-serialization-kotlinx-json.js"></script>
+    <script src="ktor-ktor-client-content-negotiation.js"></script>
+    <script src="ktor-ktor-client-js.js"></script>
+    <script src="StudySpark-shared.js"></script>
+    <script src="StudySpark-webApp.js"></script>
+
+    <!-- App Logic -->
+    <script>
+        // Modal Logic
+        function openAbout() {
+            const modal = document.getElementById('about-modal');
+            modal.classList.add('active');
+        }
+
+        function closeAbout() {
+            const modal = document.getElementById('about-modal');
+            modal.classList.remove('active');
+        }
+
+        // Close on outside click
+        document.getElementById('about-modal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeAbout();
+            }
+        });
+
+        // Hide loading screen when app is ready
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const loader = document.getElementById('loading-screen');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(function () {
+                        loader.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
