@@ -139,3 +139,8 @@ To enable the live Gemini 1.5 Flash integration:
 *   **Institution**: University of Mines and Technology (UMaT), Ghana
 *   **Contact**: +233 599 545 544
 *   **Email**: ce-hspolibu8923@st.umat.edu.gh
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for details.
